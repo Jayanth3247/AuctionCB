@@ -8,4 +8,5 @@ sentence-transformers
 langchain_chroma
 langchainhub
 pypdf
+protobuf==3.20.3
 rapidocr-onnxruntime
