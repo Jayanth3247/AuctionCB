@@ -62,7 +62,7 @@ def load_or_build_retriever():
             batch_metas = metadatas[i:i+batch_size]
             vectorstore.add_texts(texts=batch_texts, metadatas=batch_metas)
 
-        vectorstore.persist()
+        #vectorstore.persist()
         st.success("✅ Vectorstore built and saved.")
     else:
         vectorstore = Chroma(
