@@ -2,6 +2,15 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
+import sys
+
+try:
+    import pysqlite3
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ImportError:
+    pass
+
+
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
