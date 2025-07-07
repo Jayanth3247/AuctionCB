@@ -4,6 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from tqdm import tqdm
 
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 # Fix SQLite version issue for Chroma
 try:
     import pysqlite3
